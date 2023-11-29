@@ -1,5 +1,12 @@
 {
     "cmake.configureSettings": {
-      "CMAKE_INCLUDE_PATH": "/opt/homebrew/Cellar/sfml/2.6.1/include"
+      "CMAKE_INCLUDE_PATH": [
+        "/opt/homebrew/Cellar/sfml/2.6.1/include",
+        "/opt/homebrew/Cellar/googletest/1.14.0/include/gmock",
+        "/opt/homebrew/Cellar/googletest/1.14.0/include/googlemock",
+        "/opt/homebrew/Cellar/googletest/1.14.0/include/googletest",
+        "/opt/homebrew/Cellar/googletest/1.14.0/include/gtest"
+      ]
     }
   }
+  
