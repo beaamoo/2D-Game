@@ -1,0 +1,5 @@
+{
+    "cmake.configureSettings": {
+      "CMAKE_INCLUDE_PATH": "/opt/homebrew/Cellar/sfml/2.6.1/include"
+    }
+  }
