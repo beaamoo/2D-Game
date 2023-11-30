@@ -31,6 +31,6 @@ private:
     int initBackground();
     int initPlayer();
     void processInput();
-    void update(sf::Time delta, sf::Shape &player);
+    void update();  // Updated declaration
     void render();
 };

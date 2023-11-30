@@ -18,17 +18,13 @@ Game::Game() {
     initBackground();
     initPlayer();
 }
-/**
- * Window initializer.
- */
+
 int Game::initWindow() {
     window.create(sf::VideoMode(SCENE_WIDTH, SCENE_HEIGHT), "My 2D game");
     window.setFramerateLimit(120);
     return 0;
 }
-/**
- * Background initializer.
- */
+
 int Game::initBackground() {
     if (!backgroundTexture.loadFromFile("resources/background.png")) {
         return 1;
@@ -39,10 +35,6 @@ int Game::initBackground() {
     return 0;
 }
 
-/**
- * Player (e.g. PacMan) initializer
- * @return 0 if successfully initialized, 1 otherwise
- */
 int Game::initPlayer() {
     player.setRadius(RADIUS);
     player.setOrigin(RADIUS, RADIUS);
@@ -54,9 +46,6 @@ int Game::initPlayer() {
     return 0;
 }
 
-/**
- * Dealing with events on window.
- */
 void Game::processInput() {
     sf::Event event;
     while (window.pollEvent(event)) {
@@ -70,31 +59,23 @@ void Game::processInput() {
     }
 }
 
-/**
- * Function to update the position of the player
- */
-void Game::update() {
+void Game::update() {  // Updated definition
     float x = player.getPosition().x;
     float y = player.getPosition().y;
     player.setPosition(x, y);
 }
 
-/**
- * Render elements in the window
- */
 void Game::render() {
     window.clear(sf::Color::White);
     window.draw(background);
     window.draw(player);
     window.display();
 }
-/**
- * Main function to deal with events, update the player and render the updated scene on the window.
- */
+
 int Game::run() {
     while (window.isOpen()) {
         processInput();
-        update();
+        update();  // Updated call
         render();
     }
     return 0;
