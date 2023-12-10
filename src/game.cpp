@@ -4,6 +4,7 @@
 Game::Game() {
     initWindow();
     initBackground();
+    initPlanets();
     if (!snakeTexture.loadFromFile("resources/sphere.png")) {
         // Handle error - texture file not found
     }
@@ -26,7 +27,7 @@ Game::Game() {
 
 // Initialize the game window
 void Game::initWindow() {
-    window.create(sf::VideoMode(800, 600), "Snake Game");
+    window.create(sf::VideoMode(800, 600), "Space Game");
     window.setFramerateLimit(60);
 }
 
@@ -72,6 +73,10 @@ void Game::render() {
     // Draw each segment of the snake
     for (const auto& segment : snake) {
         window.draw(segment);
+    }
+    // Draw planets
+    for (const auto& planet : planets) {
+        window.draw(planet.sprite);
     }
     // Draw the food
     window.draw(food);
@@ -180,6 +185,45 @@ void Game::growSnake() {
     snake.push_back(newSegment);
     score += 10;
     updateScore();
+}
+
+void Game::initPlanets() {
+    for (int i = 0; i < 8; ++i) {
+        if (!planetTextures[i].loadFromFile("resources/planet" + std::to_string(i + 1) + ".png")) {
+            // Handle error - texture file not found
+            continue;
+        }
+
+        Planet planet;
+        planet.sprite.setTexture(planetTextures[i]); // Set texture from the array
+        planet.sprite.setPosition(rand() % window.getSize().x, rand() % window.getSize().y);
+        planet.speed = static_cast<float>(rand() % 5 + 1); // Random speed
+
+        planets.push_back(planet);
+    }
+}
+
+void Game::updatePlanets(sf::Time delta) {
+    for (auto& planet : planets) {
+        // Move each planet across the screen
+        planet.sprite.move(0, planet.speed * delta.asSeconds());
+
+        // If a planet goes off screen, reposition it to the top
+        if (planet.sprite.getPosition().y > window.getSize().y) {
+            planet.sprite.setPosition(planet.sprite.getPosition().x, -planet.sprite.getGlobalBounds().height);
+        }
+    }
+}
+
+void Game::checkPlanetCollisions() {
+    const auto& head = snake.front();
+    for (auto& planet : planets) {
+        if (head.getGlobalBounds().intersects(planet.sprite.getGlobalBounds())) {
+            score -= 20; // Deduct 20 points
+            updateScore();
+            // You can also reposition the planet or trigger other effects
+        }
+    }
 }
 
 // Update the game state

@@ -1,6 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <list>
+#include <vector>
+#include <array>
+
 
 class Game {
 public:
@@ -21,8 +24,18 @@ private:
     sf::Font font;          // Font for score text
     sf::Text scoreText;
     float moveDistanceX;
-    float moveDistanceY; 
+    float moveDistanceY;
+    std::array<sf::Texture, 8> planetTextures; // Array to store planet textures
+    struct Planet {
+        sf::Sprite sprite;
+        float speed;
+    };
 
+    std::vector<Planet> planets;
+
+    void initPlanets(); // Initialize planets
+    void updatePlanets(sf::Time delta); // Update planets' positions
+    void checkPlanetCollisions(); // Check for collisions with planets
     void initWindow();
     void initBackground();
     void initSnake();

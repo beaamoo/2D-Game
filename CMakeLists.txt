@@ -13,6 +13,14 @@ configure_file(resources/background.png ${CMAKE_CURRENT_BINARY_DIR}/resources/ba
 configure_file(resources/rocket.png ${CMAKE_CURRENT_BINARY_DIR}/resources/rocket.png COPYONLY)
 configure_file(resources/RethinkSans-VariableFont_wght.ttf ${CMAKE_CURRENT_BINARY_DIR}/resources/RethinkSans-VariableFont_wght.ttf COPYONLY)
 configure_file(resources/sphere.png ${CMAKE_CURRENT_BINARY_DIR}/resources/sphere.png COPYONLY)
+configure_file(resources/planet1.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet1.png COPYONLY)
+configure_file(resources/planet2.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet2.png COPYONLY)
+configure_file(resources/planet3.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet3.png COPYONLY)
+configure_file(resources/planet4.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet4.png COPYONLY)
+configure_file(resources/planet5.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet5.png COPYONLY)
+configure_file(resources/planet6.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet6.png COPYONLY)
+configure_file(resources/planet7.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet7.png COPYONLY)
+configure_file(resources/planet8.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet8.png COPYONLY)
 
 
 # Create the main executable
