@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/bestricemossberg/Projects/C/2D-Game/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,17 +185,69 @@ depend:
 .PHONY : 2D-Game/fast
 
 #=============================================================================
-# Target rules for targets named CoordinateTest
+# Target rules for targets named coordinate_test
 
 # Build rule for target.
-CoordinateTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CoordinateTest
-.PHONY : CoordinateTest
+coordinate_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 coordinate_test
+.PHONY : coordinate_test
 
 # fast build rule for target.
-CoordinateTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CoordinateTest.dir/build.make CMakeFiles/CoordinateTest.dir/build
-.PHONY : CoordinateTest/fast
+coordinate_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coordinate_test.dir/build.make CMakeFiles/coordinate_test.dir/build
+.PHONY : coordinate_test/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
@@ -196,7 +303,7 @@ src/move.o: src/move.cpp.o
 # target to build an object file
 src/move.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D-Game.dir/build.make CMakeFiles/2D-Game.dir/src/move.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CoordinateTest.dir/build.make CMakeFiles/CoordinateTest.dir/src/move.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coordinate_test.dir/build.make CMakeFiles/coordinate_test.dir/src/move.cpp.o
 .PHONY : src/move.cpp.o
 
 src/move.i: src/move.cpp.i
@@ -205,7 +312,7 @@ src/move.i: src/move.cpp.i
 # target to preprocess a source file
 src/move.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D-Game.dir/build.make CMakeFiles/2D-Game.dir/src/move.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CoordinateTest.dir/build.make CMakeFiles/CoordinateTest.dir/src/move.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coordinate_test.dir/build.make CMakeFiles/coordinate_test.dir/src/move.cpp.i
 .PHONY : src/move.cpp.i
 
 src/move.s: src/move.cpp.s
@@ -214,7 +321,7 @@ src/move.s: src/move.cpp.s
 # target to generate assembly for a file
 src/move.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2D-Game.dir/build.make CMakeFiles/2D-Game.dir/src/move.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CoordinateTest.dir/build.make CMakeFiles/CoordinateTest.dir/src/move.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coordinate_test.dir/build.make CMakeFiles/coordinate_test.dir/src/move.cpp.s
 .PHONY : src/move.cpp.s
 
 test/CoordinateTest.o: test/CoordinateTest.cpp.o
@@ -222,7 +329,7 @@ test/CoordinateTest.o: test/CoordinateTest.cpp.o
 
 # target to build an object file
 test/CoordinateTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CoordinateTest.dir/build.make CMakeFiles/CoordinateTest.dir/test/CoordinateTest.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coordinate_test.dir/build.make CMakeFiles/coordinate_test.dir/test/CoordinateTest.cpp.o
 .PHONY : test/CoordinateTest.cpp.o
 
 test/CoordinateTest.i: test/CoordinateTest.cpp.i
@@ -230,7 +337,7 @@ test/CoordinateTest.i: test/CoordinateTest.cpp.i
 
 # target to preprocess a source file
 test/CoordinateTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CoordinateTest.dir/build.make CMakeFiles/CoordinateTest.dir/test/CoordinateTest.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coordinate_test.dir/build.make CMakeFiles/coordinate_test.dir/test/CoordinateTest.cpp.i
 .PHONY : test/CoordinateTest.cpp.i
 
 test/CoordinateTest.s: test/CoordinateTest.cpp.s
@@ -238,7 +345,7 @@ test/CoordinateTest.s: test/CoordinateTest.cpp.s
 
 # target to generate assembly for a file
 test/CoordinateTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CoordinateTest.dir/build.make CMakeFiles/CoordinateTest.dir/test/CoordinateTest.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coordinate_test.dir/build.make CMakeFiles/coordinate_test.dir/test/CoordinateTest.cpp.s
 .PHONY : test/CoordinateTest.cpp.s
 
 # Help Target
@@ -248,9 +355,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... 2D-Game"
-	@echo "... CoordinateTest"
+	@echo "... coordinate_test"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"

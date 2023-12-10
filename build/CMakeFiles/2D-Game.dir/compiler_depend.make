@@ -425,82 +425,82 @@ CMakeFiles/2D-Game.dir/src/game.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Users/bestricemossberg/Projects/C/2D-Game/include/game.h \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Config.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/BlendMode.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/CircleShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Color.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/ConvexShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Drawable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Font.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glyph.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Image.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/PrimitiveType.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RectangleShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderStates.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTarget.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTexture.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderWindow.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shader.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Texture.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transform.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transformable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Vertex.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexArray.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/View.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Clock.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Err.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/FileInputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/InputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Lock.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/MemoryInputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Mutex.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/NonCopyable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Sleep.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocal.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Time.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Clipboard.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Context.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/ContextSettings.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Cursor.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Event.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/GlResource.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Joystick.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Keyboard.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Mouse.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Sensor.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Touch.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/VideoMode.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Vulkan.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Window.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowBase.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowHandle.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowStyle.hpp
+  /opt/homebrew/include/SFML/Config.hpp \
+  /opt/homebrew/include/SFML/Graphics.hpp \
+  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
+  /opt/homebrew/include/SFML/Graphics/CircleShape.hpp \
+  /opt/homebrew/include/SFML/Graphics/Color.hpp \
+  /opt/homebrew/include/SFML/Graphics/ConvexShape.hpp \
+  /opt/homebrew/include/SFML/Graphics/Drawable.hpp \
+  /opt/homebrew/include/SFML/Graphics/Export.hpp \
+  /opt/homebrew/include/SFML/Graphics/Font.hpp \
+  /opt/homebrew/include/SFML/Graphics/Glsl.hpp \
+  /opt/homebrew/include/SFML/Graphics/Glsl.inl \
+  /opt/homebrew/include/SFML/Graphics/Glyph.hpp \
+  /opt/homebrew/include/SFML/Graphics/Image.hpp \
+  /opt/homebrew/include/SFML/Graphics/PrimitiveType.hpp \
+  /opt/homebrew/include/SFML/Graphics/Rect.hpp \
+  /opt/homebrew/include/SFML/Graphics/Rect.inl \
+  /opt/homebrew/include/SFML/Graphics/RectangleShape.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderStates.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderTarget.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderTexture.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderWindow.hpp \
+  /opt/homebrew/include/SFML/Graphics/Shader.hpp \
+  /opt/homebrew/include/SFML/Graphics/Shape.hpp \
+  /opt/homebrew/include/SFML/Graphics/Sprite.hpp \
+  /opt/homebrew/include/SFML/Graphics/Text.hpp \
+  /opt/homebrew/include/SFML/Graphics/Texture.hpp \
+  /opt/homebrew/include/SFML/Graphics/Transform.hpp \
+  /opt/homebrew/include/SFML/Graphics/Transformable.hpp \
+  /opt/homebrew/include/SFML/Graphics/Vertex.hpp \
+  /opt/homebrew/include/SFML/Graphics/VertexArray.hpp \
+  /opt/homebrew/include/SFML/Graphics/VertexBuffer.hpp \
+  /opt/homebrew/include/SFML/Graphics/View.hpp \
+  /opt/homebrew/include/SFML/System.hpp \
+  /opt/homebrew/include/SFML/System/Clock.hpp \
+  /opt/homebrew/include/SFML/System/Err.hpp \
+  /opt/homebrew/include/SFML/System/Export.hpp \
+  /opt/homebrew/include/SFML/System/FileInputStream.hpp \
+  /opt/homebrew/include/SFML/System/InputStream.hpp \
+  /opt/homebrew/include/SFML/System/Lock.hpp \
+  /opt/homebrew/include/SFML/System/MemoryInputStream.hpp \
+  /opt/homebrew/include/SFML/System/Mutex.hpp \
+  /opt/homebrew/include/SFML/System/NonCopyable.hpp \
+  /opt/homebrew/include/SFML/System/Sleep.hpp \
+  /opt/homebrew/include/SFML/System/String.hpp \
+  /opt/homebrew/include/SFML/System/String.inl \
+  /opt/homebrew/include/SFML/System/Thread.hpp \
+  /opt/homebrew/include/SFML/System/Thread.inl \
+  /opt/homebrew/include/SFML/System/ThreadLocal.hpp \
+  /opt/homebrew/include/SFML/System/ThreadLocalPtr.hpp \
+  /opt/homebrew/include/SFML/System/ThreadLocalPtr.inl \
+  /opt/homebrew/include/SFML/System/Time.hpp \
+  /opt/homebrew/include/SFML/System/Utf.hpp \
+  /opt/homebrew/include/SFML/System/Utf.inl \
+  /opt/homebrew/include/SFML/System/Vector2.hpp \
+  /opt/homebrew/include/SFML/System/Vector2.inl \
+  /opt/homebrew/include/SFML/System/Vector3.hpp \
+  /opt/homebrew/include/SFML/System/Vector3.inl \
+  /opt/homebrew/include/SFML/Window.hpp \
+  /opt/homebrew/include/SFML/Window/Clipboard.hpp \
+  /opt/homebrew/include/SFML/Window/Context.hpp \
+  /opt/homebrew/include/SFML/Window/ContextSettings.hpp \
+  /opt/homebrew/include/SFML/Window/Cursor.hpp \
+  /opt/homebrew/include/SFML/Window/Event.hpp \
+  /opt/homebrew/include/SFML/Window/Export.hpp \
+  /opt/homebrew/include/SFML/Window/GlResource.hpp \
+  /opt/homebrew/include/SFML/Window/Joystick.hpp \
+  /opt/homebrew/include/SFML/Window/Keyboard.hpp \
+  /opt/homebrew/include/SFML/Window/Mouse.hpp \
+  /opt/homebrew/include/SFML/Window/Sensor.hpp \
+  /opt/homebrew/include/SFML/Window/Touch.hpp \
+  /opt/homebrew/include/SFML/Window/VideoMode.hpp \
+  /opt/homebrew/include/SFML/Window/Vulkan.hpp \
+  /opt/homebrew/include/SFML/Window/Window.hpp \
+  /opt/homebrew/include/SFML/Window/WindowBase.hpp \
+  /opt/homebrew/include/SFML/Window/WindowHandle.hpp \
+  /opt/homebrew/include/SFML/Window/WindowStyle.hpp
 
 CMakeFiles/2D-Game.dir/src/main.cpp.o: /Users/bestricemossberg/Projects/C/2D-Game/src/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/Availability.h \
@@ -926,82 +926,82 @@ CMakeFiles/2D-Game.dir/src/main.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stdint.h \
   /Users/bestricemossberg/Projects/C/2D-Game/include/game.h \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Config.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/BlendMode.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/CircleShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Color.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/ConvexShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Drawable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Font.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glyph.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Image.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/PrimitiveType.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RectangleShape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderStates.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTarget.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTexture.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderWindow.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shader.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shape.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Texture.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transform.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transformable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Vertex.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexArray.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/View.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Clock.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Err.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/FileInputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/InputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Lock.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/MemoryInputStream.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Mutex.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/NonCopyable.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Sleep.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocal.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Time.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.inl \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Clipboard.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Context.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/ContextSettings.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Cursor.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Event.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Export.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/GlResource.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Joystick.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Keyboard.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Mouse.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Sensor.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Touch.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/VideoMode.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Vulkan.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Window.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowBase.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowHandle.hpp \
-  /opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowStyle.hpp
+  /opt/homebrew/include/SFML/Config.hpp \
+  /opt/homebrew/include/SFML/Graphics.hpp \
+  /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
+  /opt/homebrew/include/SFML/Graphics/CircleShape.hpp \
+  /opt/homebrew/include/SFML/Graphics/Color.hpp \
+  /opt/homebrew/include/SFML/Graphics/ConvexShape.hpp \
+  /opt/homebrew/include/SFML/Graphics/Drawable.hpp \
+  /opt/homebrew/include/SFML/Graphics/Export.hpp \
+  /opt/homebrew/include/SFML/Graphics/Font.hpp \
+  /opt/homebrew/include/SFML/Graphics/Glsl.hpp \
+  /opt/homebrew/include/SFML/Graphics/Glsl.inl \
+  /opt/homebrew/include/SFML/Graphics/Glyph.hpp \
+  /opt/homebrew/include/SFML/Graphics/Image.hpp \
+  /opt/homebrew/include/SFML/Graphics/PrimitiveType.hpp \
+  /opt/homebrew/include/SFML/Graphics/Rect.hpp \
+  /opt/homebrew/include/SFML/Graphics/Rect.inl \
+  /opt/homebrew/include/SFML/Graphics/RectangleShape.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderStates.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderTarget.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderTexture.hpp \
+  /opt/homebrew/include/SFML/Graphics/RenderWindow.hpp \
+  /opt/homebrew/include/SFML/Graphics/Shader.hpp \
+  /opt/homebrew/include/SFML/Graphics/Shape.hpp \
+  /opt/homebrew/include/SFML/Graphics/Sprite.hpp \
+  /opt/homebrew/include/SFML/Graphics/Text.hpp \
+  /opt/homebrew/include/SFML/Graphics/Texture.hpp \
+  /opt/homebrew/include/SFML/Graphics/Transform.hpp \
+  /opt/homebrew/include/SFML/Graphics/Transformable.hpp \
+  /opt/homebrew/include/SFML/Graphics/Vertex.hpp \
+  /opt/homebrew/include/SFML/Graphics/VertexArray.hpp \
+  /opt/homebrew/include/SFML/Graphics/VertexBuffer.hpp \
+  /opt/homebrew/include/SFML/Graphics/View.hpp \
+  /opt/homebrew/include/SFML/System.hpp \
+  /opt/homebrew/include/SFML/System/Clock.hpp \
+  /opt/homebrew/include/SFML/System/Err.hpp \
+  /opt/homebrew/include/SFML/System/Export.hpp \
+  /opt/homebrew/include/SFML/System/FileInputStream.hpp \
+  /opt/homebrew/include/SFML/System/InputStream.hpp \
+  /opt/homebrew/include/SFML/System/Lock.hpp \
+  /opt/homebrew/include/SFML/System/MemoryInputStream.hpp \
+  /opt/homebrew/include/SFML/System/Mutex.hpp \
+  /opt/homebrew/include/SFML/System/NonCopyable.hpp \
+  /opt/homebrew/include/SFML/System/Sleep.hpp \
+  /opt/homebrew/include/SFML/System/String.hpp \
+  /opt/homebrew/include/SFML/System/String.inl \
+  /opt/homebrew/include/SFML/System/Thread.hpp \
+  /opt/homebrew/include/SFML/System/Thread.inl \
+  /opt/homebrew/include/SFML/System/ThreadLocal.hpp \
+  /opt/homebrew/include/SFML/System/ThreadLocalPtr.hpp \
+  /opt/homebrew/include/SFML/System/ThreadLocalPtr.inl \
+  /opt/homebrew/include/SFML/System/Time.hpp \
+  /opt/homebrew/include/SFML/System/Utf.hpp \
+  /opt/homebrew/include/SFML/System/Utf.inl \
+  /opt/homebrew/include/SFML/System/Vector2.hpp \
+  /opt/homebrew/include/SFML/System/Vector2.inl \
+  /opt/homebrew/include/SFML/System/Vector3.hpp \
+  /opt/homebrew/include/SFML/System/Vector3.inl \
+  /opt/homebrew/include/SFML/Window.hpp \
+  /opt/homebrew/include/SFML/Window/Clipboard.hpp \
+  /opt/homebrew/include/SFML/Window/Context.hpp \
+  /opt/homebrew/include/SFML/Window/ContextSettings.hpp \
+  /opt/homebrew/include/SFML/Window/Cursor.hpp \
+  /opt/homebrew/include/SFML/Window/Event.hpp \
+  /opt/homebrew/include/SFML/Window/Export.hpp \
+  /opt/homebrew/include/SFML/Window/GlResource.hpp \
+  /opt/homebrew/include/SFML/Window/Joystick.hpp \
+  /opt/homebrew/include/SFML/Window/Keyboard.hpp \
+  /opt/homebrew/include/SFML/Window/Mouse.hpp \
+  /opt/homebrew/include/SFML/Window/Sensor.hpp \
+  /opt/homebrew/include/SFML/Window/Touch.hpp \
+  /opt/homebrew/include/SFML/Window/VideoMode.hpp \
+  /opt/homebrew/include/SFML/Window/Vulkan.hpp \
+  /opt/homebrew/include/SFML/Window/Window.hpp \
+  /opt/homebrew/include/SFML/Window/WindowBase.hpp \
+  /opt/homebrew/include/SFML/Window/WindowHandle.hpp \
+  /opt/homebrew/include/SFML/Window/WindowStyle.hpp
 
 CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Game/src/move.cpp \
   /Users/bestricemossberg/Projects/C/2D-Game/include/move.h
@@ -1011,91 +1011,97 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Users/bestricemossberg/Projects/C/2D-Game/src/move.cpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowStyle.hpp:
+/opt/homebrew/include/SFML/Window/WindowBase.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowBase.hpp:
+/opt/homebrew/include/SFML/Window/Window.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Mouse.hpp:
+/opt/homebrew/include/SFML/Window/VideoMode.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Event.hpp:
+/opt/homebrew/include/SFML/Window/Touch.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Cursor.hpp:
+/opt/homebrew/include/SFML/Window/Mouse.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/ContextSettings.hpp:
+/opt/homebrew/include/SFML/Window/Keyboard.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Context.hpp:
+/opt/homebrew/include/SFML/Window/Joystick.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Clipboard.hpp:
+/opt/homebrew/include/SFML/Window/GlResource.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window.hpp:
+/opt/homebrew/include/SFML/Window/Export.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.hpp:
+/opt/homebrew/include/SFML/Window/ContextSettings.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.inl:
+/opt/homebrew/include/SFML/Window/Clipboard.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector2.hpp:
+/opt/homebrew/include/SFML/System/Vector2.inl:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.inl:
+/opt/homebrew/include/SFML/System/Time.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.inl:
+/opt/homebrew/include/SFML/System/ThreadLocalPtr.inl:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocal.hpp:
+/opt/homebrew/include/SFML/System/ThreadLocalPtr.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Sensor.hpp:
+/opt/homebrew/include/SFML/System/Thread.inl:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.inl:
+/opt/homebrew/include/SFML/System/Sleep.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.inl:
+/opt/homebrew/include/SFML/System/NonCopyable.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Sleep.hpp:
+/opt/homebrew/include/SFML/System/Mutex.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Mutex.hpp:
+/opt/homebrew/include/SFML/System/MemoryInputStream.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Vector3.inl:
+/opt/homebrew/include/SFML/System/Lock.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Lock.hpp:
+/opt/homebrew/include/SFML/System/InputStream.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/InputStream.hpp:
+/opt/homebrew/include/SFML/System/FileInputStream.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/FileInputStream.hpp:
+/opt/homebrew/include/SFML/System/Export.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Clock.hpp:
+/opt/homebrew/include/SFML/System/Err.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System.hpp:
+/opt/homebrew/include/SFML/System.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/View.hpp:
+/opt/homebrew/include/SFML/Graphics/Transformable.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexArray.hpp:
+/opt/homebrew/include/SFML/Graphics/Transform.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Vertex.hpp:
+/opt/homebrew/include/SFML/Graphics/Texture.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transformable.hpp:
+/opt/homebrew/include/SFML/Graphics/Text.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Text.hpp:
+/opt/homebrew/include/SFML/Graphics/Sprite.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Sprite.hpp:
+/opt/homebrew/include/SFML/Graphics/Shader.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.hpp:
+/opt/homebrew/include/SFML/Graphics/RenderWindow.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/PrimitiveType.hpp:
+/opt/homebrew/include/SFML/Graphics/RenderTexture.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.inl:
+/opt/homebrew/include/SFML/Graphics/RenderTarget.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Export.hpp:
+/opt/homebrew/include/SFML/Graphics/RenderStates.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Drawable.hpp:
+/opt/homebrew/include/SFML/Graphics/RectangleShape.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/ConvexShape.hpp:
+/opt/homebrew/include/SFML/Graphics/Rect.inl:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Color.hpp:
+/opt/homebrew/include/SFML/Graphics/Glyph.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/CircleShape.hpp:
+/opt/homebrew/include/SFML/Graphics/Glsl.inl:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/BlendMode.hpp:
+/opt/homebrew/include/SFML/Graphics/Font.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics.hpp:
+/opt/homebrew/include/SFML/System/Utf.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Config.hpp:
+/opt/homebrew/include/SFML/Graphics/Drawable.hpp:
+
+/opt/homebrew/include/SFML/Graphics/ConvexShape.hpp:
+
+/opt/homebrew/include/SFML/Graphics/BlendMode.hpp:
+
+/opt/homebrew/include/SFML/Graphics.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/stddef.h:
 
@@ -1107,15 +1113,17 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_wchar.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_string.h:
+/opt/homebrew/include/SFML/Graphics/VertexBuffer.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderWindow.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_string.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_stdlib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_stdio.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/xlocale.h:
+
+/opt/homebrew/include/SFML/Graphics/Image.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/time.h:
 
@@ -1135,8 +1143,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_wint_t.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Joystick.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_wchar_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/chrono:
@@ -1150,6 +1156,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int8_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_timespec.h:
+
+/opt/homebrew/include/SFML/Graphics/VertexArray.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/in_place.h:
 
@@ -1181,6 +1189,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_setsize.h:
 
+/opt/homebrew/include/SFML/System/Clock.hpp:
+
 /Users/bestricemossberg/Projects/C/2D-Game/src/game.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/shift_left.h:
@@ -1189,8 +1199,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int16_t.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Thread.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_mach_port_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site:
@@ -1198,8 +1206,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int64_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_set.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Err.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_uintptr_t.h:
 
@@ -1217,6 +1223,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_ct_rune_t.h:
 
+/opt/homebrew/include/SFML/Graphics/Rect.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/push_heap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_in_port_t.h:
@@ -1228,8 +1236,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_clock_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_blksize_t.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/VertexBuffer.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_blkcnt_t.h:
 
@@ -1247,9 +1253,9 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
+/opt/homebrew/include/SFML/System/Vector2.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Transform.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/max_element.h:
 
@@ -1260,8 +1266,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/strings.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RectangleShape.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/stdint.h:
 
@@ -1276,6 +1280,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_suseconds_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_pid_t.h:
+
+/opt/homebrew/include/SFML/Config.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/nl_types.h:
 
@@ -1313,23 +1319,23 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/optional:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Vulkan.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/lower_bound.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/new:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shader.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_size_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/mach/machine/_structs.h:
 
+/opt/homebrew/include/SFML/Window/WindowStyle.hpp:
+
+/opt/homebrew/include/SFML/System/String.inl:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_sigset_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/memory:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Texture.hpp:
+/opt/homebrew/include/SFML/Window.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
 
@@ -1346,8 +1352,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/next_permutation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iosfwd:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderStates.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/to_underlying.h:
 
@@ -1367,7 +1371,7 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdio:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Export.hpp:
+/opt/homebrew/include/SFML/Graphics/CircleShape.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_ino64_t.h:
 
@@ -1398,6 +1402,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/rotate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cctype:
+
+/opt/homebrew/include/SFML/System/Vector3.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/clamp.h:
 
@@ -1431,6 +1437,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/forward.h:
 
+/opt/homebrew/include/SFML/Window/Event.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/declval.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/allocator_traits.h:
@@ -1453,6 +1461,10 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/limits.h:
 
+/opt/homebrew/include/SFML/Window/Cursor.hpp:
+
+/opt/homebrew/include/SFML/Graphics/Glsl.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_rune_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/unique_ptr.h:
@@ -1473,8 +1485,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/string_view:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/GlResource.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/reference_wrapper.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/limits.h:
@@ -1491,17 +1501,19 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/size.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTarget.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/qos.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
 
+/opt/homebrew/include/SFML/System/String.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Shape.hpp:
+/opt/homebrew/include/SFML/Window/Sensor.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/advance.h:
+
+/opt/homebrew/include/SFML/Graphics/Shape.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__locale:
 
@@ -1523,10 +1535,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/max.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/RenderTexture.hpp:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glsl.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/signal.h:
@@ -1542,8 +1550,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/string.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/WindowHandle.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/next.h:
 
@@ -1593,13 +1599,11 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/hash.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Utf.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/operations.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/pthread/pthread_impl.h:
+/opt/homebrew/include/SFML/Graphics/Color.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/String.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/pthread/pthread_impl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/system_error:
 
@@ -1618,6 +1622,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/binder1st.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/function.h:
+
+/opt/homebrew/include/SFML/System/Utf.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/make_heap.h:
 
@@ -1655,8 +1661,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Glyph.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/algorithm:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/find.h:
@@ -1673,9 +1677,9 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/swap_ranges.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_wctype.h:
+/opt/homebrew/include/SFML/Graphics/Vertex.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Touch.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_wctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/AvailabilityVersions.h:
 
@@ -1719,8 +1723,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Export.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_ctermid.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/partition.h:
@@ -1745,11 +1747,11 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/move_iterator.h:
 
+/opt/homebrew/include/SFML/Window/Vulkan.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_uintmax_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/pthread/sched.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/ThreadLocalPtr.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstddef:
 
@@ -1761,8 +1763,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/addressof.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Keyboard.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/piecewise_construct.h:
@@ -1771,11 +1771,13 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/MemoryInputStream.hpp:
+/opt/homebrew/include/SFML/System/Thread.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_caddr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/errno.h:
+
+/opt/homebrew/include/SFML/System/Vector3.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/partition_point.h:
 
@@ -1791,8 +1793,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/comp_ref_type.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Rect.inl:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/search.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/iter_swap.h:
@@ -1802,6 +1802,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/equal.h:
+
+/opt/homebrew/include/SFML/Graphics/View.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ctype.h:
 
@@ -1821,7 +1823,7 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/Window.hpp:
+/opt/homebrew/include/SFML/Graphics/Export.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__availability:
 
@@ -1895,6 +1897,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer:
 
+/opt/homebrew/include/SFML/System/ThreadLocal.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_xlocale.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h:
@@ -1902,8 +1906,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/remove.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Image.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/ostream_iterator.h:
 
@@ -1915,6 +1917,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h:
 
+/opt/homebrew/include/SFML/Window/WindowHandle.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_uint32_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/back_insert_iterator.h:
@@ -1923,13 +1927,11 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__ranges/enable_borrowed_range.h:
 
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Graphics/Font.hpp:
+/opt/homebrew/include/SFML/Graphics/PrimitiveType.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/uses_allocator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/replace.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/Window/VideoMode.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
@@ -1943,6 +1945,8 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_uint16_t.h:
 
+/opt/homebrew/include/SFML/Window/Context.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/search_n.h:
@@ -1950,8 +1954,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/copy.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/Time.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/iter_move.h:
 
@@ -2006,8 +2008,6 @@ CMakeFiles/2D-Game.dir/src/move.cpp.o: /Users/bestricemossberg/Projects/C/2D-Gam
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/AvailabilityInternal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/find_end.h:
-
-/opt/homebrew/Cellar/sfml/2.6.1/include/SFML/System/NonCopyable.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/machine/limits.h:
 

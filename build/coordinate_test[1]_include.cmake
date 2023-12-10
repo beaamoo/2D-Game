@@ -1,0 +1,5 @@
+if(EXISTS "/Users/bestricemossberg/Projects/C/2D-Game/build/coordinate_test[1]_tests.cmake")
+  include("/Users/bestricemossberg/Projects/C/2D-Game/build/coordinate_test[1]_tests.cmake")
+else()
+  add_test(coordinate_test_NOT_BUILT coordinate_test_NOT_BUILT)
+endif()

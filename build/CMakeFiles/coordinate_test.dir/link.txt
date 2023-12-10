@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.5 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/coordinate_test.dir/src/move.cpp.o CMakeFiles/coordinate_test.dir/test/CoordinateTest.cpp.o -o coordinate_test  lib/libgtest_main.a lib/libgtest.a 

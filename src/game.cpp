@@ -4,9 +4,16 @@
 Game::Game() {
     initWindow();
     initBackground();
-    initSnake();
+    if (!snakeTexture.loadFromFile("resources/sphere.png")) {
+        // Handle error - texture file not found
+    }
+    if (!snakeHeadTexture.loadFromFile("resources/rocket.png")) {
+        // Handle error - texture file not found
+    }
     moveDistanceX = 5.0f; // Smaller values for slower movement
     moveDistanceY = 5.0f;
+    initSnake();
+    initFood();
     score = 0;
     if (!font.loadFromFile("resources/RethinkSans-VariableFont_wght.ttf")) { // Ensure the font file path is correct
         // Handle error
@@ -28,7 +35,16 @@ void Game::initBackground() {
     if (!backgroundTexture.loadFromFile("resources/background.png")) {
         // Handle error - file not found
     }
+
     background.setTexture(backgroundTexture);
+
+    // Calculate scale factors
+    sf::Vector2u textureSize = backgroundTexture.getSize();
+    sf::Vector2u windowSize = window.getSize();
+    float scaleX = static_cast<float>(windowSize.x) / textureSize.x;
+    float scaleY = static_cast<float>(windowSize.y) / textureSize.y;
+
+    background.setScale(scaleX, scaleY);
 }
 
 //Update the score display
@@ -39,10 +55,11 @@ void Game::updateScore() {
 
 // Initialize the snake
 void Game::initSnake() {
-    sf::CircleShape segment(10); // Size of each segment
-    segment.setFillColor(sf::Color::Green);
-    segment.setPosition(400, 300); // Starting position of the snake
-    snake.push_back(segment);
+    // Create and set up the head
+    sf::CircleShape head(40); // Size for the head
+    head.setTexture(&snakeHeadTexture); // Texture for the head
+    head.setPosition(400, 300); // Starting position of the head
+    snake.push_back(head);
 
     direction = sf::Vector2f(10, 0); // Initial movement direction
 }
@@ -50,12 +67,17 @@ void Game::initSnake() {
 // Render the game
 void Game::render() {
     window.clear();
+    // Draw the background
     window.draw(background);
+    // Draw each segment of the snake
     for (const auto& segment : snake) {
         window.draw(segment);
     }
-    window.draw(food); // Draw the food
-    window.draw(scoreText); // Draw the score
+    // Draw the food
+    window.draw(food);
+    // Draw the score text
+    window.draw(scoreText);
+    // Display the rendered frame
     window.display();
 }
 
@@ -90,13 +112,12 @@ void Game::processInput() {
 }
 
 void Game::initFood() {
-    food.setRadius(20); // Example size
-    food.setFillColor(sf::Color::Red); // Example color
+    food.setRadius(10); // Food size
+    food.setTexture(&snakeTexture); // Food texture
     spawnFood(); // Set initial position
 }
 
 void Game::spawnFood() {
-    // Randomly position the food within the window bounds
     int maxX = static_cast<int>(window.getSize().x - food.getRadius() * 2);
     int maxY = static_cast<int>(window.getSize().y - food.getRadius() * 2);
     sf::Vector2f foodPosition(rand() % maxX, rand() % maxY);
@@ -124,51 +145,55 @@ void Game::checkCollisions() {
     }
 
     // Check for self-collision
-    for (auto it = ++snake.begin(); it != snake.end(); ++it) {
+    /**for (auto it = std::next(snake.begin()); it != snake.end(); ++it) {
         if (head.getGlobalBounds().intersects(it->getGlobalBounds())) {
-            // Handle game over due to self-collision
-            // For now, let's close the window. You can replace this with more complex game over logic.
-            window.close();
+            window.close(); // You can add more sophisticated game over handling here
             return;
         }
     }
-
+**/
     // Check for food collision
-    if (snake.front().getGlobalBounds().intersects(food.getGlobalBounds())) {
+    if (head.getGlobalBounds().intersects(food.getGlobalBounds())) {
         growSnake();
         spawnFood(); // Respawn the food after it's eaten
-        // Increment score here (if you have a scoring system)
-        }
+    }
 }
 
 void Game::growSnake() {
-    // Create a new segment
-    sf::CircleShape newSegment(10);
-    newSegment.setFillColor(sf::Color::Green);
+    sf::CircleShape newSegment(10); // Segment size, matching the head and other segments
+    newSegment.setTexture(&snakeTexture); // Using the same texture as the other segments
 
-    // Position the new segment at the tail of the snake
-    const auto& tail = snake.back();
-    newSegment.setPosition(tail.getPosition()); // You can adjust this logic based on your movement mechanics
+    sf::Vector2f newPosition;
+    if (snake.size() == 1) {
+        // If there's only a head, add the segment directly below it
+        const auto& head = snake.front();
+        newPosition = head.getPosition();
+        newPosition.y += head.getRadius() * 2; // Position it below the head
+    } else {
+        // For subsequent segments, add below the last segment
+        const auto& tail = snake.back();
+        newPosition = tail.getPosition();
+        newPosition.y += tail.getRadius() * 2; // Adjust this to ensure proper spacing
+    }
 
-    // Add the new segment to the snake
+    newSegment.setPosition(newPosition);
     snake.push_back(newSegment);
-    score += 10;  // Increment the score
-    updateScore();  // Update the score display
+    score += 10;
+    updateScore();
 }
 
 // Update the game state
 void Game::update(sf::Time delta) {
-    // Move the snake
-    for (auto it = snake.rbegin(); it != snake.rend(); ++it) {
-        if (it == snake.rbegin()) {
-            // Move the head
-            it->move(direction);
-        } else {
-            // Move the body
-            auto next = it;
-            --next;
-            it->setPosition(next->getPosition());
-        }
+    sf::Vector2f prevPosition = snake.front().getPosition();
+
+    // Move the head
+    snake.front().move(direction * delta.asSeconds()* 40.0f); // Adjust the speed of the snake
+
+    // Move the rest of the body
+    for (auto it = ++snake.begin(); it != snake.end(); ++it) {
+        sf::Vector2f currentPos = it->getPosition();
+        it->setPosition(prevPosition);
+        prevPosition = currentPos;
     }
 
     checkCollisions();

@@ -12,6 +12,7 @@ private:
     sf::Sprite background;
     sf::Texture backgroundTexture;
     sf::Texture snakeTexture;
+    sf::Texture snakeHeadTexture;
     std::list<sf::CircleShape> snake;
     sf::CircleShape food;
     sf::Vector2f direction;

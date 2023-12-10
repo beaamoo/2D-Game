@@ -3,30 +3,27 @@ project(2D-Game)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# Include directories for SFML and Google Test
-include_directories(
-    include
-    /opt/homebrew/Cellar/sfml/2.6.1/include
-    /opt/homebrew/Cellar/googletest/1.14.0/include/gmock
-    /opt/homebrew/Cellar/googletest/1.14.0/include/googlemock
-    /opt/homebrew/Cellar/googletest/1.14.0/include/googletest
-    /opt/homebrew/Cellar/googletest/1.14.0/include/gtest
-)
+# Find SFML components
+find_package(SFML 2.6.1 COMPONENTS graphics window system REQUIRED)
+
+include_directories(include)
 
 # Configure resource files
 configure_file(resources/background.png ${CMAKE_CURRENT_BINARY_DIR}/resources/background.png COPYONLY)
-configure_file(resources/pacman.png ${CMAKE_CURRENT_BINARY_DIR}/resources/pacman.png COPYONLY)
+configure_file(resources/rocket.png ${CMAKE_CURRENT_BINARY_DIR}/resources/rocket.png COPYONLY)
 configure_file(resources/RethinkSans-VariableFont_wght.ttf ${CMAKE_CURRENT_BINARY_DIR}/resources/RethinkSans-VariableFont_wght.ttf COPYONLY)
+configure_file(resources/sphere.png ${CMAKE_CURRENT_BINARY_DIR}/resources/sphere.png COPYONLY)
+
 
 # Create the main executable
-add_executable(2D_game_assignment
+add_executable(2D-Game
     src/main.cpp
     src/game.cpp
     src/move.cpp
 )
 
 # Link the main executable with SFML libraries
-target_link_libraries(2D_game_assignment
+target_link_libraries(2D-Game
     sfml-graphics
     sfml-window
     sfml-system

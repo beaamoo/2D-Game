@@ -124,9 +124,9 @@ CMakeFiles/2D-Game.dir/src/move.cpp.s: cmake_force
 2D-Game: CMakeFiles/2D-Game.dir/src/game.cpp.o
 2D-Game: CMakeFiles/2D-Game.dir/src/move.cpp.o
 2D-Game: CMakeFiles/2D-Game.dir/build.make
-2D-Game: /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-graphics.2.6.1.dylib
-2D-Game: /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-window.2.6.1.dylib
-2D-Game: /opt/homebrew/Cellar/sfml/2.6.1/lib/libsfml-system.2.6.1.dylib
+2D-Game: /opt/homebrew/lib/libsfml-graphics.2.6.1.dylib
+2D-Game: /opt/homebrew/lib/libsfml-window.2.6.1.dylib
+2D-Game: /opt/homebrew/lib/libsfml-system.2.6.1.dylib
 2D-Game: CMakeFiles/2D-Game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/bestricemossberg/Projects/C/2D-Game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable 2D-Game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/2D-Game.dir/link.txt --verbose=$(VERBOSE)
