@@ -1,26 +1,16 @@
-/*
- * File: move.cpp
- * Author: Alessandra Gorla
- * Date: November 22, 2023
- * Description: Move module. It offers the functionality to let the player move.
- */
-
 #include "move.h"
 
+// Add two coordinates
 Coordinate add(Coordinate a, Coordinate b) {
-    Coordinate c = { 0, 0 };
-    c.x = a.x + b.x;
-    c.y = a.y + b.y;
-    return c;
+    return {a.x + b.x, a.y + b.y};
 }
 
-Coordinate mul(float s, Coordinate a) {
-    Coordinate b = { 0, 0 };
-    b.x = s * a.x;
-    b.y = s * a.y;
-    return b;
+// Multiply a coordinate by a scalar
+Coordinate mul(float scalar, Coordinate a) {
+    return {scalar * a.x, scalar * a.y};
 }
 
-Coordinate move(Coordinate position, Coordinate velocity, float delta) {
-    return add(position, mul(delta, velocity));
+// Move a coordinate by a velocity for a given time delta
+Coordinate move(Coordinate position, Coordinate velocity, float deltaTime) {
+    return add(position, mul(deltaTime, velocity));
 }

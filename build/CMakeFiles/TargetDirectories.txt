@@ -1,0 +1,4 @@
+/Users/bestricemossberg/Projects/C/2D-Game/build/CMakeFiles/2D-Game.dir
+/Users/bestricemossberg/Projects/C/2D-Game/build/CMakeFiles/CoordinateTest.dir
+/Users/bestricemossberg/Projects/C/2D-Game/build/CMakeFiles/edit_cache.dir
+/Users/bestricemossberg/Projects/C/2D-Game/build/CMakeFiles/rebuild_cache.dir

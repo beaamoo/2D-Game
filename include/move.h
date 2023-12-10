@@ -1,17 +1,9 @@
-/*
- * File: move.h
- * Author: Beatrice Mossberg
- * Date: November 23, 2023
- * Description: Move header.
- */
+#pragma once
 
 struct Coordinate {
-    float x;
-    float y;
+    float x, y;
 };
 
-Coordinate add(Coordinate x, Coordinate y);
-
-Coordinate mul(float s, Coordinate a);
-
-Coordinate move(Coordinate position, Coordinate velocity, float delta);
+Coordinate add(Coordinate a, Coordinate b);
+Coordinate mul(float scalar, Coordinate a);
+Coordinate move(Coordinate position, Coordinate velocity, float deltaTime);

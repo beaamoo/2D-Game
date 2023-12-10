@@ -1,11 +1,6 @@
-/*
- * File: game.h
- * Author: Alessandra Gorla
- * Date: November 21, 2023
- * Description: Game class header.
- */
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <list>
 
 class Game {
 public:
@@ -16,21 +11,27 @@ private:
     sf::RenderWindow window;
     sf::Sprite background;
     sf::Texture backgroundTexture;
-    sf::Texture playerTexture;
-    sf::CircleShape player;
+    sf::Texture snakeTexture;
+    std::list<sf::CircleShape> snake;
+    sf::CircleShape food;
+    sf::Vector2f direction;
     sf::Clock clock;
+    unsigned int score;     // Score variable
+    sf::Font font;          // Font for score text
+    sf::Text scoreText;
+    float moveDistanceX;
+    float moveDistanceY; 
 
-    static const float SCENE_WIDTH;
-    static const float SCENE_HEIGHT;
-    static const float PLAYER_START_X;
-    static const float PLAYER_START_Y;
-    static const float RADIUS;
-    static const float SPEED;
-
-    int initWindow();
-    int initBackground();
-    int initPlayer();
+    void initWindow();
+    void initBackground();
+    void initSnake();
+    void initFood();
     void processInput();
-    void update();  // Updated declaration
+    void update(sf::Time delta);
     void render();
+    void growSnake();
+    void checkCollisions();
+    void spawnFood();
+    void updateScore();  // Updates the score display
 };
+
