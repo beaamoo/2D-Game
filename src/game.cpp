@@ -15,14 +15,23 @@ Game::Game() {
     moveDistanceY = 5.0f;
     initSnake();
     initFood();
-    score = 0;
+    score = 100;
     if (!font.loadFromFile("resources/RethinkSans-VariableFont_wght.ttf")) { // Ensure the font file path is correct
         // Handle error
     }
     scoreText.setFont(font);
-    scoreText.setCharacterSize(24);
+    scoreText.setCharacterSize(20);
     scoreText.setFillColor(sf::Color::White);
     updateScore(); // Initialize score display
+    if (!gameOverTexture.loadFromFile("resources/caughtAlien.png")) {
+    // Handle error
+    }
+    gameOverSprite.setScale(0.2f, 0.2f); // Scale down the game over sprite
+    gameOverSprite.setTexture(gameOverTexture);
+    gameOverSprite.setPosition(window.getSize().x / 2 - gameOverSprite.getGlobalBounds().width / 2, 
+                            window.getSize().y / 2 - gameOverSprite.getGlobalBounds().height / 2); // Center the sprite
+
+    isGameOver = false;
 }
 
 // Initialize the game window
@@ -82,7 +91,17 @@ void Game::render() {
     window.draw(food);
     // Draw the score text
     window.draw(scoreText);
-    // Display the rendered frame
+    // Draw the game over screen
+    if (isGameOver) {
+        window.draw(gameOverSprite);
+        sf::Text gameOverText("Game Over! You were caught by enemy aliens. \n               Press R to Retry or Q to Quit", font);
+        gameOverText.setCharacterSize(24);
+        gameOverText.setFillColor(sf::Color::White);
+        // Position the text below the sprite
+        gameOverText.setPosition(window.getSize().x / 2 - gameOverText.getGlobalBounds().width / 2, 
+                                 gameOverSprite.getPosition().y + gameOverSprite.getGlobalBounds().height + 10); // 10 is a padding value
+        window.draw(gameOverText);
+    }
     window.display();
 }
 
@@ -103,6 +122,16 @@ void Game::processInput() {
         if (event.type == sf::Event::Closed)
             window.close();
 
+        if (isGameOver) {
+            if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::R) {
+                    // Reset the game to initial state
+                    resetGame();
+                } else if (event.key.code == sf::Keyboard::Q) {
+                    window.close(); // Quit the game
+                }
+            }
+        }
         if (event.type == sf::Event::KeyPressed) {
             if (event.key.code == sf::Keyboard::Up)
                 direction = sf::Vector2f(0, -moveDistanceY);
@@ -149,14 +178,6 @@ void Game::checkCollisions() {
         head.setPosition(headPos.x, 0);
     }
 
-    // Check for self-collision
-    /**for (auto it = std::next(snake.begin()); it != snake.end(); ++it) {
-        if (head.getGlobalBounds().intersects(it->getGlobalBounds())) {
-            window.close(); // You can add more sophisticated game over handling here
-            return;
-        }
-    }
-**/
     // Check for food collision
     if (head.getGlobalBounds().intersects(food.getGlobalBounds())) {
         growSnake();
@@ -188,6 +209,8 @@ void Game::growSnake() {
 }
 
 void Game::initPlanets() {
+    planetTextures.resize(8); // Resize to hold 8 textures
+
     for (int i = 0; i < 8; ++i) {
         if (!planetTextures[i].loadFromFile("resources/planet" + std::to_string(i + 1) + ".png")) {
             // Handle error - texture file not found
@@ -195,22 +218,33 @@ void Game::initPlanets() {
         }
 
         Planet planet;
-        planet.sprite.setTexture(planetTextures[i]); // Set texture from the array
-        planet.sprite.setPosition(rand() % window.getSize().x, rand() % window.getSize().y);
-        planet.speed = static_cast<float>(rand() % 5 + 1); // Random speed
+        planet.sprite.setTexture(planetTextures[i]);
+        // Set initial position off the left edge of the window at a random height
+        planet.sprite.setPosition(-planet.sprite.getGlobalBounds().width, rand() % window.getSize().y);
+        // Assign a random speed to make the planet move quickly
+        planet.speed = static_cast<float>(rand() % 100 + 50); // Speed range from 50 to 150
 
         planets.push_back(planet);
     }
 }
 
+bool Game::isOverlapping(const sf::Sprite& newPlanet) {
+    for (const auto& planet : planets) {
+        if (newPlanet.getGlobalBounds().intersects(planet.sprite.getGlobalBounds())) {
+            return true;
+        }
+    }
+    return false;
+}
+
 void Game::updatePlanets(sf::Time delta) {
     for (auto& planet : planets) {
-        // Move each planet across the screen
-        planet.sprite.move(0, planet.speed * delta.asSeconds());
+        // Move each planet horizontally
+        planet.sprite.move(planet.speed * delta.asSeconds(), 0);
 
-        // If a planet goes off screen, reposition it to the top
-        if (planet.sprite.getPosition().y > window.getSize().y) {
-            planet.sprite.setPosition(planet.sprite.getPosition().x, -planet.sprite.getGlobalBounds().height);
+        // If a planet goes off the right side of the screen, reposition it to the left
+        if (planet.sprite.getPosition().x > window.getSize().x) {
+            planet.sprite.setPosition(-planet.sprite.getGlobalBounds().width, rand() % window.getSize().y);
         }
     }
 }
@@ -219,15 +253,39 @@ void Game::checkPlanetCollisions() {
     const auto& head = snake.front();
     for (auto& planet : planets) {
         if (head.getGlobalBounds().intersects(planet.sprite.getGlobalBounds())) {
-            score -= 20; // Deduct 20 points
-            updateScore();
-            // You can also reposition the planet or trigger other effects
+            score -= 10;  // Deduct 10 points upon collison with a planet
+            updateScore(); // Update the score display
+            // Optionally, reposition the collided planet
+            planet.sprite.setPosition(-planet.sprite.getGlobalBounds().width, rand() % window.getSize().y);
         }
     }
 }
 
+void Game::resetGame() {
+    // Reset game variables
+    score = 100;
+    isGameOver = false;
+    // Reset other game elements as needed
+
+    updateScore();
+    // ... more resetting as needed ...
+}
+
 // Update the game state
 void Game::update(sf::Time delta) {
+    //Check for game over
+    if (score <= 0) {
+        // Handle game over due to score reaching 0
+        isGameOver = true;
+        return;
+    }
+    //Check for winning
+    if (score >= 200) {
+        // Handle winning the game
+        window.close(); // Or transition to a winning screen
+        return;
+    }
+
     sf::Vector2f prevPosition = snake.front().getPosition();
 
     // Move the head
@@ -239,6 +297,8 @@ void Game::update(sf::Time delta) {
         it->setPosition(prevPosition);
         prevPosition = currentPos;
     }
-
+    updatePlanets(delta);
+    checkPlanetCollisions();
     checkCollisions();
+
 }

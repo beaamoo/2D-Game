@@ -9,6 +9,7 @@ class Game {
 public:
     Game();
     int run();
+    void resetGame(); // Resets the game to initial state
 
 private:
     sf::RenderWindow window;
@@ -25,13 +26,14 @@ private:
     sf::Text scoreText;
     float moveDistanceX;
     float moveDistanceY;
-    std::array<sf::Texture, 8> planetTextures; // Array to store planet textures
+    std::vector<sf::Texture> planetTextures; // Vector to store planet textures
     struct Planet {
         sf::Sprite sprite;
         float speed;
     };
-
     std::vector<Planet> planets;
+    sf::Texture gameOverTexture;  // Texture for the game over screen
+    sf::Sprite gameOverSprite;    // Sprite for the game over screen
 
     void initPlanets(); // Initialize planets
     void updatePlanets(sf::Time delta); // Update planets' positions
@@ -47,5 +49,7 @@ private:
     void checkCollisions();
     void spawnFood();
     void updateScore();  // Updates the score display
+    bool isOverlapping(const sf::Sprite& newPlanet); // Checks if a planet is overlapping with another planet
+    bool isGameOver;
 };
 
