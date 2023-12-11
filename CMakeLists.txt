@@ -23,6 +23,7 @@ configure_file(resources/planet7.png ${CMAKE_CURRENT_BINARY_DIR}/resources/plane
 configure_file(resources/planet8.png ${CMAKE_CURRENT_BINARY_DIR}/resources/planet8.png COPYONLY)
 configure_file(resources/caughtAlien.png ${CMAKE_CURRENT_BINARY_DIR}/resources/caughtAlien.png COPYONLY)
 configure_file(resources/eatingAlien.png ${CMAKE_CURRENT_BINARY_DIR}/resources/eatingAlien.png COPYONLY)
+configure_file(resources/hugAlien.png ${CMAKE_CURRENT_BINARY_DIR}/resources/hugAlien.png COPYONLY)
 
 
 # Create the main executable

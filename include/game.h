@@ -37,7 +37,8 @@ private:
     sf::Texture winTexture;
     sf::Sprite winSprite;
     sf::Text winText; // Text to display when the player wins
-
+    sf::Texture welcomeTexture;
+    sf::Sprite welcomeSprite;
     
     void initPlanets(); // Initialize planets
     void updatePlanets(sf::Time delta); // Update planets' positions
@@ -56,5 +57,11 @@ private:
     bool isOverlapping(const sf::Sprite& newPlanet); // Checks if a planet is overlapping with another planet
     bool isGameOver;
     bool isWin; // Flag to indicate if the player has won
+    bool showWelcomeScreen;
+    void setupGameOverSprite();
+    void setupWinSprite();
+    void setupWelcomeSprite();
+    void setupScoreText();
+    void setupWinText();
 };
 

@@ -5,55 +5,86 @@ Game::Game() {
     initWindow();
     initBackground();
     initPlanets();
+
+    // Load textures and handle errors
     if (!snakeTexture.loadFromFile("resources/sphere.png")) {
-        // Handle error - texture file not found
-    }
-    if (!snakeHeadTexture.loadFromFile("resources/rocket.png")) {
-        // Handle error - texture file not found
-    }
-    moveDistanceX = 5.0f; // Smaller values for slower movement
-    moveDistanceY = 5.0f;
-    initSnake();
-    initFood();
-    score = 100;
-    if (!font.loadFromFile("resources/RethinkSans-VariableFont_wght.ttf")) { // Ensure the font file path is correct
         // Handle error
     }
+    if (!snakeHeadTexture.loadFromFile("resources/rocket.png")) {
+        // Handle error
+    }
+    if (!font.loadFromFile("resources/RethinkSans-VariableFont_wght.ttf")) {
+        // Handle error
+    }
+    if (!gameOverTexture.loadFromFile("resources/caughtAlien.png")) {
+        // Handle error
+    }
+    if (!winTexture.loadFromFile("resources/eatingAlien.png")) {
+        // Handle error
+    }
+    if (!welcomeTexture.loadFromFile("resources/hugAlien.png")) {
+        // Handle error
+    }
+
+    // Set initial game state
+    moveDistanceX = 5.0f; 
+    moveDistanceY = 5.0f;
+    score = 50;
+    isGameOver = false;
+    isWin = false;
+    showWelcomeScreen = true;
+
+    // Initialize game elements
+    initSnake();
+    initFood();
+    setupGameOverSprite();
+    setupWinSprite();
+    setupWelcomeSprite();
+    setupGameOverSprite();
+    setupWelcomeSprite();
+
+    // Setup text objects
+    setupScoreText();
+    setupWinText();
+}
+
+void Game::setupGameOverSprite() {
+    gameOverSprite.setTexture(gameOverTexture);
+    gameOverSprite.setScale(0.2f, 0.2f);
+    gameOverSprite.setPosition(window.getSize().x / 2 - gameOverSprite.getGlobalBounds().width / 2, 
+                               window.getSize().y / 2 - gameOverSprite.getGlobalBounds().height / 2);
+}
+
+void Game::setupWinSprite() {
+    winSprite.setTexture(winTexture);
+    winSprite.setScale(0.2f, 0.2f); // Adjust scale as needed
+    winSprite.setPosition(window.getSize().x / 2 - winSprite.getGlobalBounds().width / 2,
+                          window.getSize().y / 2 - winSprite.getGlobalBounds().height / 2);
+}
+
+void Game::setupWelcomeSprite() {
+    welcomeSprite.setTexture(welcomeTexture);
+    welcomeSprite.setScale(0.2f, 0.2f); // Adjust scale as needed
+    welcomeSprite.setPosition(window.getSize().x / 2 - welcomeSprite.getGlobalBounds().width / 2,
+                              window.getSize().y / 2 - welcomeSprite.getGlobalBounds().height / 2);
+}
+
+void Game::setupScoreText() {
     scoreText.setFont(font);
     scoreText.setCharacterSize(20);
     scoreText.setFillColor(sf::Color::White);
-    updateScore(); // Initialize score display
-    if (!gameOverTexture.loadFromFile("resources/caughtAlien.png")) {
-    // Handle error
-    }
-    gameOverSprite.setScale(0.2f, 0.2f); // Scale down the game over sprite
-    gameOverSprite.setTexture(gameOverTexture);
-    gameOverSprite.setPosition(window.getSize().x / 2 - gameOverSprite.getGlobalBounds().width / 2, 
-                            window.getSize().y / 2 - gameOverSprite.getGlobalBounds().height / 2); // Center the sprite
+    // Position the score text somewhere on the screen, e.g., top-left
+    scoreText.setPosition(10, 10); // Adjust as needed
+}
 
-    isGameOver = false;
-    if (!winTexture.loadFromFile("resources/eatingAlien.png")) {
-    // Handle the error, e.g., print an error message
-    } else {
-    winSprite.setTexture(winTexture);
-    // Resize and position the sprite, similar to the game over sprite
-    winSprite.setScale(0.2f, 0.2f); // Adjust the scale as needed
-    winSprite.setPosition(window.getSize().x / 2 - winSprite.getGlobalBounds().width / 2, 
-                          window.getSize().y / 2 - winSprite.getGlobalBounds().height / 2);
-    winText.setFont(font); // Assuming 'font' is already loaded and set up
+void Game::setupWinText() {
+    winText.setFont(font);
     winText.setString("Congratulations! You've won!\nPress R to Replay or Q to Quit");
     winText.setCharacterSize(24);
     winText.setFillColor(sf::Color::White);
     winText.setStyle(sf::Text::Bold);
-
-    // Center the text horizontally and position it below the winSprite
-    winText.setPosition(
-        window.getSize().x / 2 - winText.getGlobalBounds().width / 2,
-        winSprite.getPosition().y + winSprite.getGlobalBounds().height + 20 // Adjust Y position as needed
-    );
-
-    isWin = false;
-}
+    winText.setPosition(window.getSize().x / 2 - winText.getGlobalBounds().width / 2,
+                        winSprite.getPosition().y + winSprite.getGlobalBounds().height + 20);
 }
 
 // Initialize the game window
@@ -101,34 +132,46 @@ void Game::render() {
     window.clear();
     // Draw the background
     window.draw(background);
-    // Draw each segment of the snake
-    for (const auto& segment : snake) {
-        window.draw(segment);
-    }
-    // Draw planets
-    for (const auto& planet : planets) {
-        window.draw(planet.sprite);
-    }
-    // Draw the food
-    window.draw(food);
-    // Draw the score text
-    window.draw(scoreText);
-    // Draw the game over screen
-    if (isGameOver) {
-        window.draw(gameOverSprite);
-        sf::Text gameOverText("Game Over! You were caught by enemy aliens. \n               Press R to Retry or Q to Quit", font);
-        gameOverText.setCharacterSize(24);
-        gameOverText.setFillColor(sf::Color::White);
-        // Position the text below the sprite
-        gameOverText.setPosition(window.getSize().x / 2 - gameOverText.getGlobalBounds().width / 2, 
-                                 gameOverSprite.getPosition().y + gameOverSprite.getGlobalBounds().height + 10); // 10 is a padding value
-        window.draw(gameOverText);
-    }
-    if (isWin) {
-        window.draw(winSprite);
-        window.draw(winText); // Draw the winning text
-    }
+    // Draw the welcome screen
+    if (showWelcomeScreen) {
+        window.draw(welcomeSprite);
 
+        sf::Text welcomeText("Help Larry refuel the ship but watch out for the planets! Press a key to Play.", font);
+        welcomeText.setCharacterSize(20);
+        welcomeText.setFillColor(sf::Color::White);
+        welcomeText.setPosition(window.getSize().x / 2 - welcomeText.getGlobalBounds().width / 2, 
+                                welcomeSprite.getPosition().y + welcomeSprite.getGlobalBounds().height + 20);
+
+        window.draw(welcomeText);
+    } else {
+        // Draw each segment of the snake
+        for (const auto& segment : snake) {
+            window.draw(segment);
+        }
+        // Draw planets
+        for (const auto& planet : planets) {
+            window.draw(planet.sprite);
+        }
+        // Draw the food
+        window.draw(food);
+        // Draw the score text
+        window.draw(scoreText);
+        // Draw the game over screen
+        if (isGameOver) {
+            window.draw(gameOverSprite);
+            sf::Text gameOverText("Game Over! You were caught by enemy aliens. \n               Press R to Retry or Q to Quit", font);
+            gameOverText.setCharacterSize(24);
+            gameOverText.setFillColor(sf::Color::White);
+            // Position the text below the sprite
+            gameOverText.setPosition(window.getSize().x / 2 - gameOverText.getGlobalBounds().width / 2, 
+                                    gameOverSprite.getPosition().y + gameOverSprite.getGlobalBounds().height + 10); // 10 is a padding value
+            window.draw(gameOverText);
+        }
+        if (isWin) {
+            window.draw(winSprite);
+            window.draw(winText); // Draw the winning text
+        }
+    }
     window.display();
 }
 
@@ -150,8 +193,15 @@ void Game::processInput() {
             window.close();
         }
 
-        // Check if the game is over or won
-        if (isGameOver || isWin) {
+        // Handle welcome screen input
+        if (showWelcomeScreen) {
+            if (event.type == sf::Event::KeyPressed) {
+                showWelcomeScreen = false;
+                resetGame();  // Start or restart the game
+            }
+        } 
+        // Handle game over or win input
+        else if (isGameOver || isWin) {
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::R) {
                     resetGame(); // Reset the game to start over
@@ -159,17 +209,24 @@ void Game::processInput() {
                     window.close(); // Exit the game
                 }
             }
-        } else {
-            // Game is not over or won, process other keypresses
+        }
+        // Handle gameplay input
+        else {
             if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::Up) {
-                    direction = sf::Vector2f(0, -moveDistanceY);
-                } else if (event.key.code == sf::Keyboard::Down) {
-                    direction = sf::Vector2f(0, moveDistanceY);
-                } else if (event.key.code == sf::Keyboard::Left) {
-                    direction = sf::Vector2f(-moveDistanceX, 0);
-                } else if (event.key.code == sf::Keyboard::Right) {
-                    direction = sf::Vector2f(moveDistanceX, 0);
+                switch (event.key.code) {
+                    case sf::Keyboard::Up:
+                        direction = sf::Vector2f(0, -moveDistanceY);
+                        break;
+                    case sf::Keyboard::Down:
+                        direction = sf::Vector2f(0, moveDistanceY);
+                        break;
+                    case sf::Keyboard::Left:
+                        direction = sf::Vector2f(-moveDistanceX, 0);
+                        break;
+                    case sf::Keyboard::Right:
+                        direction = sf::Vector2f(moveDistanceX, 0);
+                        break;
+                    // Add other key handling as needed
                 }
             }
         }
