@@ -32,6 +32,28 @@ Game::Game() {
                             window.getSize().y / 2 - gameOverSprite.getGlobalBounds().height / 2); // Center the sprite
 
     isGameOver = false;
+    if (!winTexture.loadFromFile("resources/eatingAlien.png")) {
+    // Handle the error, e.g., print an error message
+    } else {
+    winSprite.setTexture(winTexture);
+    // Resize and position the sprite, similar to the game over sprite
+    winSprite.setScale(0.2f, 0.2f); // Adjust the scale as needed
+    winSprite.setPosition(window.getSize().x / 2 - winSprite.getGlobalBounds().width / 2, 
+                          window.getSize().y / 2 - winSprite.getGlobalBounds().height / 2);
+    winText.setFont(font); // Assuming 'font' is already loaded and set up
+    winText.setString("Congratulations! You've won!\nPress R to Replay or Q to Quit");
+    winText.setCharacterSize(24);
+    winText.setFillColor(sf::Color::White);
+    winText.setStyle(sf::Text::Bold);
+
+    // Center the text horizontally and position it below the winSprite
+    winText.setPosition(
+        window.getSize().x / 2 - winText.getGlobalBounds().width / 2,
+        winSprite.getPosition().y + winSprite.getGlobalBounds().height + 20 // Adjust Y position as needed
+    );
+
+    isWin = false;
+}
 }
 
 // Initialize the game window
@@ -59,7 +81,7 @@ void Game::initBackground() {
 
 //Update the score display
 void Game::updateScore() {
-    scoreText.setString("Score: " + std::to_string(score));
+    scoreText.setString("Fuel Level: " + std::to_string(score) + "%");
     scoreText.setPosition(10, 10); // Position the score text on the window
 }
 
@@ -102,6 +124,11 @@ void Game::render() {
                                  gameOverSprite.getPosition().y + gameOverSprite.getGlobalBounds().height + 10); // 10 is a padding value
         window.draw(gameOverText);
     }
+    if (isWin) {
+        window.draw(winSprite);
+        window.draw(winText); // Draw the winning text
+    }
+
     window.display();
 }
 
@@ -119,28 +146,32 @@ int Game::run() {
 void Game::processInput() {
     sf::Event event;
     while (window.pollEvent(event)) {
-        if (event.type == sf::Event::Closed)
+        if (event.type == sf::Event::Closed) {
             window.close();
+        }
 
-        if (isGameOver) {
+        // Check if the game is over or won
+        if (isGameOver || isWin) {
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::R) {
-                    // Reset the game to initial state
-                    resetGame();
+                    resetGame(); // Reset the game to start over
                 } else if (event.key.code == sf::Keyboard::Q) {
-                    window.close(); // Quit the game
+                    window.close(); // Exit the game
                 }
             }
-        }
-        if (event.type == sf::Event::KeyPressed) {
-            if (event.key.code == sf::Keyboard::Up)
-                direction = sf::Vector2f(0, -moveDistanceY);
-            else if (event.key.code == sf::Keyboard::Down)
-                direction = sf::Vector2f(0, moveDistanceY);
-            else if (event.key.code == sf::Keyboard::Left)
-                direction = sf::Vector2f(-moveDistanceX, 0);
-            else if (event.key.code == sf::Keyboard::Right)
-                direction = sf::Vector2f(moveDistanceX, 0);
+        } else {
+            // Game is not over or won, process other keypresses
+            if (event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::Up) {
+                    direction = sf::Vector2f(0, -moveDistanceY);
+                } else if (event.key.code == sf::Keyboard::Down) {
+                    direction = sf::Vector2f(0, moveDistanceY);
+                } else if (event.key.code == sf::Keyboard::Left) {
+                    direction = sf::Vector2f(-moveDistanceX, 0);
+                } else if (event.key.code == sf::Keyboard::Right) {
+                    direction = sf::Vector2f(moveDistanceX, 0);
+                }
+            }
         }
     }
 }
@@ -253,7 +284,7 @@ void Game::checkPlanetCollisions() {
     const auto& head = snake.front();
     for (auto& planet : planets) {
         if (head.getGlobalBounds().intersects(planet.sprite.getGlobalBounds())) {
-            score -= 10;  // Deduct 10 points upon collison with a planet
+            score -= 5;  // Deduct 10 points upon collison with a planet
             updateScore(); // Update the score display
             // Optionally, reposition the collided planet
             planet.sprite.setPosition(-planet.sprite.getGlobalBounds().width, rand() % window.getSize().y);
@@ -265,6 +296,7 @@ void Game::resetGame() {
     // Reset game variables
     score = 100;
     isGameOver = false;
+    isWin = false; // Reset win flag
     // Reset other game elements as needed
 
     updateScore();
@@ -280,9 +312,9 @@ void Game::update(sf::Time delta) {
         return;
     }
     //Check for winning
-    if (score >= 200) {
+    if (score >= 110) {
         // Handle winning the game
-        window.close(); // Or transition to a winning screen
+        isWin = true; // Trigger the winning state        return;
         return;
     }
 

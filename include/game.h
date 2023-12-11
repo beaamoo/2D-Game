@@ -34,7 +34,11 @@ private:
     std::vector<Planet> planets;
     sf::Texture gameOverTexture;  // Texture for the game over screen
     sf::Sprite gameOverSprite;    // Sprite for the game over screen
+    sf::Texture winTexture;
+    sf::Sprite winSprite;
+    sf::Text winText; // Text to display when the player wins
 
+    
     void initPlanets(); // Initialize planets
     void updatePlanets(sf::Time delta); // Update planets' positions
     void checkPlanetCollisions(); // Check for collisions with planets
@@ -51,5 +55,6 @@ private:
     void updateScore();  // Updates the score display
     bool isOverlapping(const sf::Sprite& newPlanet); // Checks if a planet is overlapping with another planet
     bool isGameOver;
+    bool isWin; // Flag to indicate if the player has won
 };
 
