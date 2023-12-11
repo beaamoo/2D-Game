@@ -10,17 +10,17 @@ https://github.com/beaamoo/2D-Game/assets/118908954/041e681f-c9e7-4850-840e-f1e2
 ## Getting Started
 ### Environment Assumptions for 2D-Game
 #### Software Requirements
-Operating Systems: Windows 10+, macOS Mojave+, or a recent Linux distribution (e.g., Ubuntu 18.04+).
-Development Tools: GCC, Clang, or MSVC; SFML 2.5+; CMake 3.15+.
-IDE Recommendations: Visual Studio 2019 (Windows), Xcode (macOS), Code::Blocks or VSCode (Linux).
+- Operating Systems: Windows 10+, macOS Mojave+, or a recent Linux distribution (e.g., Ubuntu 18.04+).
+- Development Tools: GCC, Clang, or MSVC; SFML 2.5+; CMake 3.15+.
+- IDE Recommendations: Visual Studio 2019 (Windows), Xcode (macOS), Code::Blocks or VSCode (Linux).
 
 #### Hardware Requirements
-Minimum: 1 GHz CPU, 2 GB RAM, integrated graphics, 100 MB storage.
-Recommended: 2 GHz CPU, 4 GB RAM, dedicated GPU with OpenGL 3.0 support, 200 MB storage.
+- Minimum: 1 GHz CPU, 2 GB RAM, integrated graphics, 100 MB storage.
+- Recommended: 2 GHz CPU, 4 GB RAM, dedicated GPU with OpenGL 3.0 support, 200 MB storage.
 
 #### Additional Notes
-No internet connection required for gameplay.
-Performance may vary outside these specifications.
+- No internet connection required for gameplay.
+- Performance may vary outside these specifications.
 
 ### Prerequisites
 Before you begin, ensure you have the following installed:
