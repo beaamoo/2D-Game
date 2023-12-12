@@ -71,6 +71,30 @@ Before you begin, ensure you have the following installed:
    At win or gameover state:
    - Press 'Q' to quit the game.
    - Press 'R' to restart the game.
+  
+## Testing
+### Overview
+To ensure the reliability and correctness of our 2D-Game, we have implemented a robust testing strategy using the Google Test framework. Our tests are designed to cover critical functionalities of the game, focusing on various aspects including coordinate calculations, game mechanics, and collision detection. This approach helps us maintain high code quality and game performance.
+
+### Running Tests
+After building the project, you can run the tests by following these steps:
+
+Navigate to the Build Directory: Change to the directory where your game is built.
+```bash
+cd build
+./coordinate_test
+```
+
+### Test Coverage
+Our testing suite includes a variety of test cases to ensure comprehensive coverage:
+
+1. **Coordinate Calculations:** Tests the accuracy and reliability of coordinate transformations and movements, crucial for the game's spatial logic.
+
+2. **Game Mechanics:** Evaluates the initialization, state transitions, and updates in game mechanics to ensure consistent behavior under different scenarios.
+
+3. **Collision Detection:** Validates the detection of collisions between various game elements, a core aspect of game dynamics.
+
+As the game evolves, we regularly update and expand our tests to include new features and scenarios, ensuring ongoing stability and performance.
 
 ## Contributing
 We welcome contributions! If you have ideas, bug fixes, or improvements, feel free to fork the repository and submit pull requests.
