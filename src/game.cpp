@@ -351,7 +351,7 @@ void Game::checkPlanetCollisions() {
 
 void Game::resetGame() {
     // Reset game variables
-    score = 100;
+    score = 50;
     isGameOver = false;
     isWin = false; // Reset win flag
     // Reset other game elements as needed
@@ -369,7 +369,7 @@ void Game::update(sf::Time delta) {
         return;
     }
     //Check for winning
-    if (score >= 110) {
+    if (score > 100) {
         // Handle winning the game
         isWin = true; // Trigger the winning state        return;
         return;
