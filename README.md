@@ -40,6 +40,8 @@ Before you begin, ensure you have the following installed:
    ```bash
    mkdir build
    cd build
+   rm CMakeCache.txt
+   rm -rf _deps
    cmake ..
    make
    ```
